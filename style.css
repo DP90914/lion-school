@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #3347B0;
+    --primary-text-color: #FFFFFF;
+
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    
+}
+
+header, footer{
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 96px;
+    align-items: center;
+}
+header div{
+    display: flex;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 78px 96px;
+}
+
+.main div{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.main div h1{
+    font-weight: 300;
+    font-size: 57px;
+    width: 470px;
+}
+
+span{
+    color: var(--primary-color);
+}
+
+.btnCurso button{
+    height: 200px;
+    width: 400px;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    border: 1px black solid;
+    font-size: 64px;
+    font-weight: 500;
+}
+.alunoMain{
+    display: flex;
+    padding: 78px 96px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.alunoMain h1{
+    text-align: center;
+}
+
+.alunoMain div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 62px;
+    justify-content: space-evenly;
+}
+.alunoCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 24px;
+    gap: 8px;
+}
+.alunoCard img{
+    border-radius: 100%;
+    width: 200px;
+}
+.alunoCard h3{
+    color: var(--primary-text-color);
+    text-align: center;
+    font-size: 22px;
+    word-wrap: break-word;
+    width: 200px;
+}
+.contato{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contato div{
+    display: flex;
+    gap: 24px;
+}
+footer h2{
+    font-size: 20px;
+}
