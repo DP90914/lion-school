@@ -1,20 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --primary-color: #3347B0;
     --primary-text-color: #FFFFFF;
 
 }
 
-body{
+body {
     font-family: "Roboto", sans-serif;
-    
+
 }
 
-header, footer{
+header,
+footer {
     background-color: var(--primary-color);
     color: var(--primary-text-color);
     display: flex;
@@ -22,33 +24,35 @@ header, footer{
     padding: 14px 96px;
     align-items: center;
 }
-header div{
+
+header div {
     display: flex;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 78px 96px;
 }
 
-.main div{
+.main div {
     display: flex;
     flex-direction: column;
     gap: 64px;
 }
-.main div h1{
+
+.main div h1 {
     font-weight: 300;
     font-size: 57px;
     width: 470px;
 }
 
-span{
+span {
     color: var(--primary-color);
 }
 
-.btnCurso button{
+.btnCurso button {
     height: 200px;
     width: 400px;
     background-color: var(--primary-color);
@@ -57,7 +61,8 @@ span{
     font-size: 64px;
     font-weight: 500;
 }
-.alunoMain{
+
+.alunoMain {
     display: flex;
     padding: 78px 96px;
     flex-wrap: wrap;
@@ -65,17 +70,18 @@ span{
     gap: 32px;
 }
 
-.alunoMain h1{
+.alunoMain h1 {
     text-align: center;
 }
 
-.alunoMain div{
+.alunoMain div {
     display: flex;
     flex-wrap: wrap;
     gap: 62px;
     justify-content: space-evenly;
 }
-.alunoCard{
+
+.alunoCard {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -84,26 +90,53 @@ span{
     padding: 24px;
     gap: 8px;
 }
-.alunoCard img{
+
+.descAlunoMain {
+    display: flex;
+}
+
+.alunoCard img {
     border-radius: 100%;
     width: 200px;
 }
-.alunoCard h3{
+
+.alunoCard h3 {
     color: var(--primary-text-color);
     text-align: center;
     font-size: 22px;
     word-wrap: break-word;
     width: 200px;
 }
-.contato{
+
+.alunoDiv {
+    margin: 100px 0px 60px 105px;
+    padding: 30px;
+    border: 1px black solid;
+}
+
+.alunoDiv img {
+    border-radius: 100%;
+    width: 300px;
+}
+
+.alunoDiv h3 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 22px;
+    width: 300px;
+}
+
+.contato {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.contato div{
+
+.contato div {
     display: flex;
     gap: 24px;
 }
-footer h2{
+
+footer h2 {
     font-size: 20px;
 }
