@@ -93,6 +93,7 @@ span {
 
 .descAlunoMain {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .alunoCard img {
@@ -124,6 +125,20 @@ span {
     text-align: center;
     font-size: 22px;
     width: 300px;
+}
+
+.divNotas {
+    margin: 96px 60px;
+    display: flex;
+    gap: 32px;
+    border: 1px solid black;
+    padding: 70px 101px;
+}
+
+.valorBarra {
+    width: 15px;
+    background-color: var(--primary-color);
+
 }
 
 .contato {

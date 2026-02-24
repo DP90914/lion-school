@@ -1,7 +1,5 @@
 'use strict'
 
-const { createElement } = require("react")
-
 const botoes = document.getElementById("botoes")
 const main = document.querySelector("main")
 
@@ -97,18 +95,25 @@ function criarAlunosDesc(aluno) {
     aluno.desempenho.forEach(item => {
         const valorNota = document.createElement("h3")
         const valorBarra = document.createElement("div")
+        const valorBarra1 = document.createElement("div")
         const valorMateria = document.createElement("h3")
         const divNota = document.createElement("div")
 
-        valorNota.textContent = item.valorBarra
+        valorNota.textContent = item.valor
         valorMateria.textContent = item.categoria
 
         divNota.appendChild(valorNota)
+        valorBarra.appendChild(valorBarra1)
         divNota.appendChild(valorBarra)
         divNota.appendChild(valorMateria)
 
+        valorBarra.classList.add("valorBarra")
+        valorBarra.style.height = `${item.valor}%`
+
         divNotas.appendChild(divNota)
     });
+
+    divNotas.classList.add("divNotas")
 
     divAluno.appendChild(alunoImg)
     divAluno.appendChild(alunoNome)
