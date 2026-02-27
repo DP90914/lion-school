@@ -109,9 +109,22 @@ function criarAlunosDesc(aluno) {
         valorBarra.style.height = `100%`
         valorBarra.classList.add("valorBarraMain")
 
-        
+        divNota.classList.add("divNota")
         valorBarraCor.classList.add("valorBarraCor")
         valorBarraCor.style.height= `${item.valor}%`
+        if(item.valor > 75){
+            valorBarraCor.style.backgroundColor = "#3347B0"
+            valorNota.style.color = "#3347B0"
+            valorMateria.style.color = "#3347B0"
+        }else if(item.valor >= 50){
+            valorBarraCor.style.backgroundColor = "#fbff00"
+            valorNota.style.color = "#fbff00"
+            valorMateria.style.color = "#fbff00"
+        }else{
+            valorBarra.style.backgroundColor = "#EB964F7"
+            valorNota.style.color = "#EB964F7"
+            valorMateria.style.color = "#EB964F7"
+        }
 
         divNotas.appendChild(divNota)
     });
