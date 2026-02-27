@@ -11,7 +11,7 @@ criarBotoes()
 
 
 async function pegarBotoes() {
-    const url = "https://lion-school-phbo.onrender.com/cursos"
+    const url = "https://lion-school-backend.onrender.com/cursos"
     const response = await (await fetch(url)).json()
     return response
 }
@@ -31,7 +31,7 @@ async function criarBotoes() {
 }
 
 async function procurarAlunosCurso(curso, nome) {
-    const url = `https://lion-school-phbo.onrender.com/alunos?curso_id=${curso}`
+    const url = `https://lion-school-backend.onrender.com/alunos?curso_id=${curso}`
     const response = await (await fetch(url)).json()
     criarAlunosCurso(response, nome)
     return response
@@ -70,7 +70,7 @@ function criarAlunosCurso(alunos, turma) {
 }
 
 async function procurarAlunosDesc(id) {
-    const url = `https://lion-school-phbo.onrender.com/alunos/${id}`
+    const url = `https://lion-school-backend.onrender.com/alunos/${id}`
     const response = await (await fetch(url)).json()
     return response
 }
@@ -84,8 +84,6 @@ function criarAlunosDesc(aluno) {
     const divAluno = document.createElement("div")
     const divNotas = document.createElement("div")
 
-
-
     const alunoImg = document.createElement("img")
     const alunoNome = document.createElement("h3")
 
@@ -95,7 +93,7 @@ function criarAlunosDesc(aluno) {
     aluno.desempenho.forEach(item => {
         const valorNota = document.createElement("h3")
         const valorBarra = document.createElement("div")
-        const valorBarra1 = document.createElement("div")
+        const valorBarraCor =document.createElement("div")
         const valorMateria = document.createElement("h3")
         const divNota = document.createElement("div")
 
@@ -103,12 +101,17 @@ function criarAlunosDesc(aluno) {
         valorMateria.textContent = item.categoria
 
         divNota.appendChild(valorNota)
-        valorBarra.appendChild(valorBarra1)
         divNota.appendChild(valorBarra)
         divNota.appendChild(valorMateria)
+        
+        valorBarra.appendChild(valorBarraCor)
 
-        valorBarra.classList.add("valorBarra")
-        valorBarra.style.height = `${item.valor}%`
+        valorBarra.style.height = `100%`
+        valorBarra.classList.add("valorBarraMain")
+
+        
+        valorBarraCor.classList.add("valorBarraCor")
+        valorBarraCor.style.height= `${item.valor}%`
 
         divNotas.appendChild(divNota)
     });
